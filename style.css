@@ -1,0 +1,262 @@
+body {
+    height: 1000vh;
+    width: 100%;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+
+}
+a, a:hover, a:visited {
+    color: #0071bc;
+}
+iframe{
+    top:0;
+    position:absolute;
+}
+#cover{
+    display:flex;
+    align-items: center;
+}
+
+#map {
+    top:0;
+    height: 100vh;
+    width:100vw;
+    /* position: fixed; */
+    opacity:0;
+}
+#largemap_0{
+    height:100vh;
+    width:100vw;
+}
+
+#largemap_1,#largemap_2,#largemap_3{
+    height: 100vh;
+    width:100vw;
+    opacity: 0;
+    z-index: -1;
+}
+
+.temphover{
+    opacity:0.8;
+    z-index: 9999;
+    transition: opacity 0.4s ease-in-out;
+    background-color: #fff;
+    border-radius: 1em;
+    top: 25vh;
+
+    right: 50vw;
+    width: 500px;
+    transform: translate(50%,0);
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font: .9em/1em 'Open Sans', sans-serif;
+    line-height: 2.0em;
+    padding: 1em 2em 0em;
+    position: absolute;
+    max-width: 25%;
+
+}
+/* .temphover:hover{
+    opacity:0.0;
+    z-index: 0;
+    display:none;
+} */
+.subtitle{
+    position: absolute;
+    top: 7vh;
+    left: 8vw;
+}
+
+#header {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+#header h1, #header h2, #header p {
+    margin: 0;
+    padding: 2vh 2vw;
+    text-align: center;
+}
+#features {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.step {
+    padding-bottom: 5vh;
+    margin-bottom: 80vh;
+    opacity: 0.01;
+    transition: opacity 0.4s ease-in-out;
+}
+.step.active {
+    opacity: 0.99;
+}
+
+.step div {
+    padding:  15px 20px;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.step img {
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .centered, .lefty, .righty, .fully {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+.slide {
+    background-color: black;
+    /* border: 1px white solid; */
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    position: relative;
+}
+iframe{
+    width:100%;
+    height:100%;
+}
+
+#slide3>img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+#text_on_img{
+    position:absolute;
+    top: 5%;
+    left:5%;
+}
+
+/* Fix issue on mobile browser where scroll breaks  */
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+    touch-action: unset;
+}
+#tile_frame_frame{
+    height:300vh;
+}
+#tile_frame{
+    position:relative;
+    top:0;
+    left:0;
+    background-color:#fafafa;
+    line-height: 0;
+    margin-top: calc(50vh - 25.5vw);
+
+}
+.scroll_locked{
+    position:fixed;
+    top:0;
+    z-index:1;
+    opacity: 1;
+}
+#largemap_1.scroll_locked, #largemap_2.scroll_locked,#largemap_3.scroll_locked{
+    position:fixed;
+    top:0;
+    z-index:1;
+    opacity: 1;
+
+}
+#largemap_0,#largemap_1,#largemap_2,#largemap_3{
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+#tile_frame.scroll_locked{
+    position:fixed;
+    z-index:2;
+}
+#tile_frame.fade_out{
+    opacity:0;
+}
+
+.tile{
+    display: inline-block;
+    position: relative;
+    padding: 0px;
+    margin: 0.1vw;
+
+    width: 8.13vw;
+    height: 8.13vw;
+    line-height: 5px;
+    /* background: #aaa; */
+
+    overflow : hidden;
+    transition-duration: 500ms;
+    transition-property: border-radius, top, left, height, width, opacity;
+}
+
+
+.tile>img.center-cropped{
+    top:0;
+    left:0;
+    z-index:1;
+
+
+    position:relative;
+    transition: opacity 0.3s ease-in-out;
+
+    object-fit:none;
+    object-position:center;
+    width:100%;
+    height:auto;
+}
+#tile_frame.closing>#prisons_textbox_70{
+    display : none;
+}
+#tile_frame.closing>#prisons_textbox_26{
+    display: block;
+    animation: fade_in_show 1s
+}
+@keyframes fade_in_show {
+    0% {
+         opacity: 0;
+    }
+
+    100% {
+         opacity: 0.8;
+    }
+}
+#prisons_textbox_26{
+    display: none;
+}    
+
+
+#tile_frame>.tile>img.center-cropped:hover{
+    opacity:0;
+}
+.tile.open{
+    opacity:0.3;
+}
+.tile>.tile_hover_text{
+    width: 8.13vw;
+    height: 8.13vw;
+    padding: 0px;
+    margin: 0px;
+
+    background-color: white;
+    position: absolute;
+    display: inline-block;
+    transform: translate(-100%);
+
+    overflow: hidden;
+}
+.tile_hover_text p{
+    font-size:13px;
+    margin:0;
+    line-height: 14px;
+}
+.tile_hover_text>p.name{
+    font-weight: bold;
+}
+
+
+
+

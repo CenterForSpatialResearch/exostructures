@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Urban Exostructures</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+</head>
+<body>
+
+<!-- <div id="map"></div> -->
+<div id="story">
+    <div id="cover" class ="slide">
+        <!--cover page -->
+        <div id="tile_in_cover"></div> 
+            <div class="temphover"> 
+            <h4>Prisons and Prison Closures in New York State</h4>
+
+            <p>With a 56% reduction in prison population since 2000, 26 prisons in New York State have closed and more are set to be closed. Layering these closures with policies, economic and community impact, pushback, political positions, environmental concerns, as well as the decentralization of the criminal justice system, this research seeks to envision post-prison futures in the rural towns of upstate New York. It also explores the flows and transfers through the prison economy that interconnect these towns and New York City. A range of visions focus on prisons, towns or the system of mass incarceration, and consider state infrastructures- carceral, water, food, power, waste- as urban exostructures.</p>
+            </div>
+
+        </div>
+    <div id="slide2" class="slide">
+        <!-- timeline-->
+        <div class="subtitle">
+            <h1>prison timeline</h1>
+        </div>
+
+
+        <iframe src="https://alamolong.github.io/Urban_Exostructure/" title="timeline" id="prison_timeline"></iframe>
+    </div>  
+
+    <div id="tile_frame_frame">
+        <div id="tile_frame" class="slide">
+            <!-- prison tile-->
+
+            <div id= "prisons_textbox_70" class="temphover">
+                <h4>Prison Towns of New York State</h4>
+                
+                <h1>Prison's organization and functioning:</h1>
+
+                <p>New York State has state and federal prisons, but no private prisons. Their administration and regulation relies on the Department of Corrections and Community Supervision (DOCCS), while local governments are in charge of particular policies and programs in each prison. 
+
+                    Prison staff and guards don’t always come from the areas where prisons are located. They are institutional workers who are assigned positions within the system as required. 
+                    
+                    All prisoners have to participate in the labor program, which varies from prison to prison. Prisons also offer internal programs for education, vocational training, assistance for physical and mental health, and drug abuse.  
+                </p>                    
+
+            </div>
+            <div id= "prisons_textbox_26" class="temphover">
+                <h4>Prison Towns of New York State</h4>
+                
+                <h1>Prison's organization and functioning:</h1>
+
+                <p>Over the past 30 years, 26 prisons have closed or are set to be closed. Most of these closed and closing prisons are located in upstate New York.</p>
+
+            </div>
+            
+
+        </div>
+    </div>
+   
+    <div id="largemap_0">
+        <!-- -->
+        <iframe src="https://crispycritters.github.io/22UrbanExostructures/" title="largemap"></iframe>
+    </div>
+    <div id="largemap_1">
+        <!-- -->
+
+        <iframe src="https://hyuein.github.io/Industries/" title="largemap"></iframe>
+    </div>
+    <div id="largemap_2">
+        <!-- -->
+        <iframe src="https://hyuein.github.io/IndividualTown/" title="townmap"></iframe>
+    </div>
+    <div id="largemap_3">
+        <!-- -->
+        <iframe src="https://skyorskye.github.io/new-new-final-draft/" title="townmap"></iframe>
+    </div>
+
+    
+</div>
+
+
+<script src="./config.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>

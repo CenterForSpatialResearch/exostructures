@@ -361,8 +361,13 @@ function foo() {
             //chapter starts from 1 
 
             current_chapter = Math.floor(window.scrollY/innerHeight+1);
-            if(current_chapter>=tile_starts_slidenum+6){
+            console.log(window.scrollY/innerHeight+1);
+            if(window.scrollY/innerHeight+1>=tile_starts_slidenum+6.2){
+                largemap_3.style.opcity =0.1;
+            }
+            else if(current_chapter>=tile_starts_slidenum+6){
                 largemap_3.classList.add("scroll_locked");
+                largemap_3.style.opcity =1;
                 largemap_2.classList.remove("scroll_locked");
 
             }

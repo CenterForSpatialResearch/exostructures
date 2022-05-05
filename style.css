@@ -118,6 +118,33 @@ iframe{
     z-index: 999;
     position: relative;
 }
+.slide.credit{
+    position:relative;
+    top:150vh;
+    color: white;
+}
+h3{
+    font-weight: 100;
+}
+.slide .text_wrapper{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 60vw;
+    height: auto;
+    position: relative;
+    left: 50vw;
+    top: 20vh;
+    transform: translate(-50%);
+    padding: 5px;
+}
+.slide .text_wrapper hr{
+    width: 95%;
+}
+.slide .text_wrapper p{
+    margin-left: 2em;
+}
+.slide .text_wrapper .name{
+    margin-left: 4em;
+}
 iframe{
     width:100%;
     height:100%;
